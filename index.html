@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
 </head>
 <body>
@@ -13,19 +14,36 @@
             <div class="title-section">
                 <div class="greeting" id="greeting"></div>
                 <h1>You've got <span class="task-count" id="taskCount">0</span> tasks today
-                    <button class="add-btn" onclick="openModal()">Add New</button>
+                    <button class="add-btn" onclick="openModal()"> + Add New</button>
                 </h1>
             </div>
 
             <div class="section">
                 <div class="section-header"><h2>In Progress</h2></div>
-                <div id="inProgressTasks"></div>
+                <div id="inProgressTasks">
+                    <div class="task-item">
+                        <div class="task-checkbox" onclick="toggleTask()"></div>
+                        <div class="task-content">
+                            <div class="task-title">Task 1</div>
+                        </div>
+                        <span class="status-badge status-cancelled"></span>
+
+                        <button class="icon-btn" style="width: 30px; height: 30px; border: none; border-radius: 12px;" onclick="editTask()">
+                            <i class="fa-solid fa-pen" style="font-size: 12px;"></i>
+                        </button>
+
+                        <button class="icon-btn" style="width: 30px; height: 30px; border: none; border-radius: 12px;" onclick="deleteTask()">
+                            <i class="fa-solid fa-trash" style="font-size: 12px;"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="section">
                 <div class="section-header">
-                    <div class="section-header"><h2>Completed</h2></div>
+                    <div class="section-header"><h2>Completed</h2>
                     <span class="badge badge-inactive">Inactive</span>
+                    </div>
                 </div>
                 <div id="completedTasks"></div>
             </div>
