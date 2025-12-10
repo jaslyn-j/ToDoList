@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="title-section">
+                <div class="greeting" id="greeting"></div>
+                <h1>You've got <span class="task-count" id="taskCount">0</span> tasks today
+                    <button class="add-btn" onclick="openModal()">Add New</button>
+                </h1>
+            </div>
+
+            <div class="section">
+                <div class="section-header"><h2>In Progress</h2></div>
+                <div id="inProgressTasks"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-header"><h2>Completed</h2></div>
+                    <span class="badge badge-inactive">Inactive</span>
+                </div>
+                <div id="completedTasks"></div>
+            </div>
+                
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
