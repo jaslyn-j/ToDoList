@@ -7,7 +7,6 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #b8c9e2;
-    min-width: 100vh;
     padding: 40px 20px;
 
 }
@@ -19,7 +18,7 @@ body{
     border-radius: 30px;
     padding: 40px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 350px;
     gap: 30px;
 }
@@ -89,4 +88,82 @@ body{
 .badge-inactive{
     background: rgb(251, 214, 217);
     color: red;
+}
+
+.task-item{
+    background: rgb(250, 250, 250);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgb(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.task-item:hover{
+    background-color: rgb(245,245,245);
+}
+
+.task-checkbox{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(99, 99, 99);
+    cursor: pointer;
+}
+
+.task-checkbox.completed{
+    background: rgb(99, 99, 99);
+    position: relative;
+}
+
+.task-checkbox.completed::after{
+    content:'✓';
+    color: rgb(255, 255, 255);
+    size: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task-content{
+    flex: 1;
+
+}
+
+.task-title{
+    font-size: 15px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.task-title.completed{
+    text-decoration: line-through;
+    color:#6b7280;
+}
+.status-badge{
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pending{
+    background: #f5d864;
+    color: rgb(240, 199, 18);
+}
+.status-progress{
+    background: #9cc4f8;
+    color: rgb(99, 143, 246);
+}
+.status-completed{
+    background: #8df5c1;
+    color: rgb(78, 235, 138);
+}
+.status-cancelled{
+    background: #f5b4a7;
+    color: rgb(246, 117, 100);
 }
