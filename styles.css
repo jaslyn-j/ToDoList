@@ -79,10 +79,6 @@ body{
     font-weight: 600;
 }
 
-.badge-inactive{
-    background: rgb(251, 214, 217);
-    color: red;
-}
 
 .task-item{
     background: rgb(250, 250, 250);
