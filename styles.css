@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
     background: #b8c9e2;
     padding: 40px 20px;
 
@@ -29,12 +29,6 @@ body{
 .title-section{
     margin-bottom: 40px;
 }
-.greeting{
-    font-size: 1rem;
-    color: #6b7280;
-    margin-bottom: 10px;
-}
-
 .title-section h1{
     font-size: 40px;
     font-weight: 700;
@@ -59,7 +53,7 @@ body{
 
 }
 .add-btn:hover{
-    background: rgb(75, 30, 180);
+    background: rgb(71, 71, 203);
 }
 
 .section{
@@ -151,7 +145,7 @@ body{
     font-weight: 600;
 }
 
-.status-pending{
+.status-notstarted{
     background: #f5d864;
     color: rgb(240, 199, 18);
 }
@@ -173,7 +167,7 @@ body{
     border-radius: 20px;
     padding: 25px;
     display: flex;
-    margin-left: auto;
+    margin-left: auto;    
     width: 35%;
 }
 
@@ -226,4 +220,103 @@ body{
     border-radius: 10px;
     transition: width 0.5s ease;
 
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active{
+    display: flex;
+}
+
+.modal-content{
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+
+}
+.modal-header{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus{
+    border-color: rgb(156, 156, 157);
+}
+
+.modal-actions{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary{
+    background: rgb(87, 87, 249);
+    color: white;
+}
+
+.btn-primary:hover{
+    background: rgb(71, 71, 203);
+    
+}
+
+.btn-secondary{
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.btn-secondary:hover{
+    background: #e5e7eb;
+    
+}
+
+@media (max-width: 1024px){
+    .container{
+        grid-template-columns: 1fr;
+    }
 }
