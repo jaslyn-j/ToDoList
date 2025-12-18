@@ -142,19 +142,19 @@ body{
 }
 
 .status-notstarted{
-    background: #f5d864;
+    background: #fff5d3;
     color: rgb(240, 199, 18);
 }
 .status-progress{
-    background: #9cc4f8;
+    background: #cee3fe;
     color: rgb(99, 143, 246);
 }
 .status-completed{
-    background: #8df5c1;
+    background: #cdfae3;
     color: rgb(78, 235, 138);
 }
 .status-cancelled{
-    background: #f5b4a7;
+    background: #f7cdc4;
     color: rgb(246, 117, 100);
 }
 

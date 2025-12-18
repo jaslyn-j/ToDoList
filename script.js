@@ -9,7 +9,7 @@ function loadData(){
         tasks=[
             {
                 id:1,
-                title: "Generic Task 1",
+                title: "Sample Task 1",
                 status: "Not Started",
                 completed: false,
             },
@@ -79,6 +79,7 @@ function renderTasks(){
     document.getElementById("taskCount").textContent=pending;
     document.getElementById("totalTasks").textContent=total;
     document.getElementById("completedCount").textContent=completedCount;
+    document.getElementById("pendingCount").textContent=pending;
     document.getElementById("completedRateValue").textContent=rate+"%";
     document.getElementById("totalProgress").style.width=rate+"%";
     document.getElementById("completionProgress").style.width=rate+"%";
